@@ -22,7 +22,7 @@ public class JWTFilter implements WebFilter {
     public JWTFilter(TokenProvider tokenProvider) {
         this.tokenProvider = tokenProvider;
     }
-
+ 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
         String jwt = resolveToken(exchange.getRequest());
